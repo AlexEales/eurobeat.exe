@@ -3,5 +3,7 @@ go_binary(
     srcs = [
         "main.go",
     ],
-    deps = [],
+    deps = [
+        "//src/decoding",
+    ],
 )

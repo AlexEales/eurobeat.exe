@@ -1,8 +1,20 @@
 package(default_visibility = ["PUBLIC"])
 
 go_get(
-    name = "testify",
-    get = "github.com/stretchr/testify",
+    name = "require",
+    get = "github.com/stretchr/testify/require",
+    deps = [
+        ":assert",
+        ":difflib",
+        ":objx",
+        ":spew",
+        ":yaml",
+    ],
+)
+
+go_get(
+    name = "assert",
+    get = "github.com/stretchr/testify/assert",
     deps = [
         ":difflib",
         ":objx",
